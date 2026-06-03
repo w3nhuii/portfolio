@@ -40,7 +40,7 @@ export default function App() {
               color: "rgba(255,255,255,0.3)",
             }}
           >
-            © 2025 · Software Engineer · Singapore
+            © 2025 · Software Engineer · Malaysia
           </span>
         </div>
       </footer>

@@ -42,7 +42,7 @@ export function About() {
             I'm a software engineer with experience shipping cross-platform mobile apps and web applications across maritime logistics, retail, and analytics. I care about UI/UX detail and writing clean, maintainable code.
           </p>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "var(--muted-foreground)" }}>
-            Currently at Bunkerchain in Singapore building Flutter and Vue.js applications for the maritime industry. Previously at Agmo Studio delivering multi-client mobile projects and consistently improving app store ratings.
+            Currently at Bunkerchain in Malaysia building Flutter and Vue.js applications for the maritime industry. Previously at Agmo Studio delivering multi-client mobile projects and consistently improving app store ratings.
           </p>
 
           <div className="pt-6 border-t border-border mt-2">

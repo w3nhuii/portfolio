@@ -2,7 +2,7 @@ const jobs = [
   {
     title: "Software Developer",
     company: "Bunkerchain Pte Ltd",
-    location: "Singapore",
+    location: "Malaysia",
     period: "Apr 2025 – Present",
     bullets: [
       "Develop and maintain cross-platform mobile apps with Flutter (iOS & Android) for the maritime and logistics industry.",

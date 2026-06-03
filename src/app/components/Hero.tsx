@@ -27,7 +27,7 @@ export function Hero() {
           }}
           className="mb-7"
         >
-          Software Engineer · Singapore
+          Software Engineer · Malaysia
         </p>
 
         <h1
