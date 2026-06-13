@@ -1,6 +1,6 @@
 const jobs = [
   {
-    title: "Software Developer",
+    title: "Full Stack Developer",
     company: "Bunkerchain Pte Ltd",
     location: "Malaysia",
     period: "Apr 2025 – Present",

@@ -1,8 +1,8 @@
 const skills = [
   "Flutter", "React Native", "React.js", "Vue.js",
-  "Tailwind CSS", "RESTful APIs", "Git & Git Flow",
-  "MVVM Architecture", "UI/UX Design", "iOS & Android",
-  "App Store Deployment", "Cross-platform Development",
+  "Spring Boot", "Java", "MySQL", "RESTful APIs",
+  "Tailwind CSS", "Git & Git Flow", "MVVM Architecture",
+  "iOS & Android", "App Store Deployment", "AWS",
 ];
 
 export function About() {
@@ -33,13 +33,13 @@ export function About() {
               letterSpacing: "-0.02em",
             }}
           >
-            Apps people actually enjoy using.
+            Full-stack, front to back.
           </h2>
         </div>
 
         <div className="flex flex-col gap-5">
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "var(--muted-foreground)" }}>
-            I'm a software engineer with experience shipping cross-platform mobile apps and web applications across maritime logistics, retail, and analytics. I care about UI/UX detail and writing clean, maintainable code.
+            I'm a full-stack developer with experience building end-to-end products across maritime logistics, retail, and analytics — from mobile and web frontends to backend APIs and database design. I care about UI/UX detail and writing clean, maintainable code.
           </p>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "var(--muted-foreground)" }}>
             Currently at Bunkerchain in Malaysia building Flutter and Vue.js applications for the maritime industry. Previously at Agmo Studio delivering multi-client mobile projects and consistently improving app store ratings.

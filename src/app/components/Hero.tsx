@@ -40,9 +40,9 @@ export function Hero() {
             letterSpacing: "-0.02em",
           }}
         >
-          Mobile & web
+          Full-stack,
           <br />
-          <span style={{ color: "#5B9BFF" }}>built with care.</span>
+          <span style={{ color: "#5B9BFF" }}>end to end.</span>
         </h1>
 
         <p
@@ -55,7 +55,7 @@ export function Hero() {
           }}
           className="mt-7"
         >
-          I build cross-platform mobile apps and responsive web experiences using Flutter, React Native, React.js, and Vue.js.
+          I build end-to-end products — from Flutter and Vue.js frontends to Spring Boot APIs and MySQL databases.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
