@@ -1,20 +1,35 @@
 import { useState } from "react";
-import { ArrowUpRight, Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { ArrowUpRight, Mail, Linkedin, Github } from "lucide-react";
 
 const socials = [
-  { label: "GitHub", icon: Github, href: "#" },
-  { label: "LinkedIn", icon: Linkedin, href: "#" },
-  { label: "Twitter / X", icon: Twitter, href: "#" },
-  { label: "Email", icon: Mail, href: "mailto:your@email.com" },
+  { label: "GitHub", icon: Github, href: "https://github.com/w3nhuii" },
+  { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/boonhuinyok13" },
+  { label: "Email", icon: Mail, href: "mailto:wenhuiiyang@gmail.com" },
 ];
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:3001"}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -164,8 +179,14 @@ export function Contact() {
                   onBlur={(e) => (e.target.style.borderColor = "")}
                 />
               </div>
+              {error && (
+                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.85rem", color: "#ef4444" }}>
+                  {error}
+                </p>
+              )}
               <button
                 type="submit"
+                disabled={loading}
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "0.875rem",
@@ -175,12 +196,13 @@ export function Contact() {
                   padding: "0.75rem 1.75rem",
                   borderRadius: "6px",
                   border: "none",
-                  cursor: "pointer",
+                  cursor: loading ? "not-allowed" : "pointer",
                   alignSelf: "flex-start",
+                  opacity: loading ? 0.7 : 1,
                 }}
-                className="hover:opacity-90 transition-opacity"
+                className="transition-opacity"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}
