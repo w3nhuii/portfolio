@@ -76,7 +76,7 @@ export function Hero() {
             View My Work
           </a>
           <a
-            href="/common files/Resume 2026.pdf"
+            href="common%20files/Resume%202026.pdf"
             download
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
