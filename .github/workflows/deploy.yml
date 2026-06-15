@@ -28,6 +28,8 @@ jobs:
         run: npm ci
 
       - name: Build website
+        env:
+          VITE_API_URL: https://portfolio-be-dev3.onrender.com
         run: npm run build
 
       - name: Upload GitHub Pages artifact
